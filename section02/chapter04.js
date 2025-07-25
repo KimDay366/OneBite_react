@@ -48,10 +48,10 @@ console.log(obj3);
 // 1-3. 함수에서 사용하기
 
 function fa(a,b,c){
-    console.log(a,b,c);
+    console.log(a,b,c); 
 };
 
-fa(...arr1);
+fa(...arr1); // arr1 = [1,2,3] 값이 그대로 들어가게 됨
 // 단 함수에서 사용 시 해당 배열,객체와 동일한 수 만큼 변수 사용해야 함
 // [rest 매개변수] 라는걸 사용하면 보다 편리해짐!
 
@@ -77,9 +77,16 @@ func(...arr1);
 // 나머지만 ...rest에 저장되므로 중간에 있는 배열 값을 가지려면
 // 앞에 있는 값들의 변수도 모두 지정 해야함
 
-function fund(one, ...namuge, four){
-    console.log(namuge);
+const namugeNum = [1,2,3,4,5,6,7,8,9];
+
+function fund(one, two, ...namuge){
+    console.log(namuge); 
+    // one, two는 각각 1, 2로 지정되고
+    // [3,4,5,6,7,8,9]는 namuge에 저장됨
+    // ...rest의 이름은 자유롭게 지정 가능함.
+    // 단 ...rest 매개변수를 쓴 뒤에 변수 선언은 안됨!!!!
 }
-fund(...arr1);
+
+fund(...namugeNum);
 // rest 매개변수의 이름은 자유롭게 지정 가능함.
 // 단 ...rest 매개변수를 쓴 뒤에 변수 선언은 안됨
