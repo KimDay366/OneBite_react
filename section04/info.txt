@@ -37,12 +37,3 @@
     [3단계] Layout : 요소의 배치를 잡는 작업
 
     [4단계] Painting : 실제로 화면에 그려내는 과정
-
-* React Application이란?
-React를 사용해 만든 웹 서비스를 React App을 의미함
-
-* React APP 생성하기
-1. Node JS 패키지 생성
-2. React 라이브러리 설치
-3. 기타 도구 설치 및 설정 = Vite, 차세대 프론트엔드 개발 툴, 기본 설정이 적용된 React APP 생성 기능(react 공식 문서에서도 권장하고 있음)
-
