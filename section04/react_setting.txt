@@ -1,0 +1,33 @@
+* React Application이란?
+React를 사용해 만든 웹 서비스를 React App을 의미함
+
+* React APP 개발 단계
+1. Node JS 패키지 생성
+2. React 라이브러리 설치
+3. 기타 도구 설치 및 설정 = Vite, 차세대 프론트엔드 개발 툴, 기본 설정이 적용된 React APP 생성 기능(react 공식 문서에서도 권장하고 있음)
+4. 개발 진행
+5. 배포
+
+=======================================================================
+
+* React App 개발 준비
+1. 설치를 원하는 폴더 안에 터미널 창을 열어서 [ npm create vite@latest ] 진행
+   - Need to install the following packages: -> y (vite 설치 해도 될지 물어보는 것)
+   - Project name : [기본값] vite-project 또는 사용자 편의대로 수정
+   - Select a framework : 키보드 방향키를 이용해 "react" 선택(엔터)
+   - Select a variant : 프레임워크의 버전 선택, 키보드 방향키를 이용해 "Javascript" 선택(엔터)
+
+2. 신규로 생성 된 폴더에서 다시 터미널 창을 열어서 [ npm i ] 진행 
+   (package.json 파일을 기반으로 필요한 라이브러리를 다운로드 함)
+
+3. 설치 된 폴더 및 파일 탐색하기 
+   - [폴더] public : 이미지 / 폰트 등 정적인 자료의 저장소  
+   - [폴더] src : 자바스크립트 파일이나 리액트 파일을 저장 해 두는 실제 작업공간
+                 .css, .jsx(리액트 확장자), .js같은 파일들이 있음
+                 또한 [폴더] assets에도 정적인 자료를 저장 가능함
+   - .eslintrc.cjs : 개발자들간의 개발 언어 규칙에 대한 정의를 기재 해 둔 파일
+   - .gitignore : github에 파일을 업로드 할 경우, 이 파일에 작성된 폴더 및 파일은 업로드 되지 않음
+   - package.json : 개발 작업을 셋팅하기 위한 내용이 기재 된 파일
+                    파일 내 "script" 객체를 사용해서 터미널에서 작업 할 명령의 단축어를 추가, 삭제, 수정 할 수 있음
+
+4. 터미널에서 개발환경 열기 : npm run dev -> 알파벳 o 치면 개발중인 창 열림
