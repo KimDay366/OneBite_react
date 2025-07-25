@@ -15,10 +15,11 @@ arr1.forEach(function(item, idx, arr){
 // 변수 명은 변경 가능
 
 let doubleArr = [];
-arr1.forEach((item)=>{ doubleArr.push(item*2) });
+arr1.forEach((item)=>{ doubleArr.push(item*2) }); // 화살표 함수를 사용해서 작업
 
 console.log(doubleArr);
 
+// =======================================================================
 
 // 2. includes()
 // 배열에 특성 요소가 있는지 확인하는 메서드
@@ -30,6 +31,7 @@ console.log(findArr1); // True, 마지막 요소인 3 찾음
 console.log(findArr2); // false, 찾는 요소가 문자열 3이라 못 찾음
 
 
+// =======================================================================
 
 // 3. indexOf()
 // 특정 요소의 인덱스(위치)를 찾아서 반환하는 메서드
@@ -47,16 +49,20 @@ console.log(id3); // -1 : 존재하지 않는 값을 표기 하는 것
 
 
 
+// =======================================================================
 
 // 4. findIndex()
-// 모든 요소를 순회하면서, 콜백함수를 만족하는
-// 특정 요소의 인덱스(위치)를 반환하는 메서드
+// 모든 요소를 순회하면서, 콜백함수를 만족하는 특정 요소의 인덱스(위치)를 반환하는 메서드
 let arr5 = [1,2,3];
 let findIdx1 = arr5.findIndex((item)=>{
     if(item === 2) return true;
-}); // 해당 값을 찾으면 true를 반환 => 콜백 함수가 멈춤 => 해당 인덱스 저장
+}); 
+console.log(findIdx1); 
+// 1 : 값 "2"의 인덱스만 반환
+// 해당 값을 찾으면 true를 반환 => 콜백 함수가 멈춤 => 해당 인덱스 저장
 
-console.log(findIdx1); // 1 : 값 "2"의 인덱스만 반환
+// 간결한 형태로 작성 가능 
+// let findIdx1 = arr5.findIndex((item)=>item === 2);
 
 
 let findIdx2 = arr5.findIndex((item)=>{
@@ -77,31 +83,30 @@ console.log(findIdx3); // -1 : 존재하지 않는 값을 표기 하는 것
 
 
 
-
 // indexOf = 얕은 비교, 객체가 배열에 저장되면 못 찾음. 원시 타입 잘 찾음
 // findIndex = 깊은 비교, 객체가 배열에 저장되면 찾음
 
 let objArr = [
-    {n : 1},
-    {n : 2},
-    {n : 3},
+    {name: "obj1", num : 1},
+    {name: "obj2", num : 2},
+    {name: "obj3", num : 3},
 ];
 
 console.log(
-    objArr.indexOf({n : 1})
+    objArr.indexOf({num : 1})
 ); // -1 = 값을 못 찾는다 선언
 
-console.log(
-    objArr.findIndex((item)=>item.n === 1)
-); // 0번째 있다고 찾을 수 있음.
+const findIdxObj = objArr.findIndex((item)=>item.num === 2);
+console.log(`ObjArr의 값 찾기 : ${findIdxObj}`); // 0번째 있다고 찾을 수 있음.
 
 
 
+// =======================================================================
 
 
 // 5. find
 // 모든 요소를 순회하면서 콜백함수를 만족하는 요소를 찾는데
-// 요소를 그대로 반환
+// 해당 요소를 그대로 반환
 
-const fin = objArr.find((item)=>item.n === 1);
-console.log(fin); // {n:1} 모두 불러옴
+const fin = objArr.find((item)=>item.num === 1);
+console.log(fin); // 해당하는 {name: "obj1", num: 1} 모두 불러옴
