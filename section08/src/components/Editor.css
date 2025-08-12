@@ -1,0 +1,5 @@
+.editor {display: flex; gap: 10px;}
+
+.editor > input {flex : 1; padding: 10px; border : 1px solid #ddd; border-radius: 5px; }
+
+.editor > button{ cursor: pointer; width: 80px; border: 0; background-color: rgb(167, 228, 208);}

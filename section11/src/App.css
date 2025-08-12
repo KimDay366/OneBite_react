@@ -1,0 +1,6 @@
+.App{ width: 100%; max-width: 400px; margin: 0 auto; padding: 10px;
+    display: flex; flex-direction: column; gap: 10px; }
+/* displey: flex 로 설정하면, 자식 간 간격을 설정하는 gap:; 을 사용할 수 있음 */
+
+.App h1 { color : rgb(74, 206, 96); margin: 0; }
+.App h3 {margin : 0 ;}

@@ -1,0 +1,57 @@
+.viewer h5{
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+}
+
+.emo_box {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 30px;
+    box-sizing: border-box;
+
+    display : flex;
+    flex-direction: column; /* 자식들이 한줄에 하나씩 */
+    align-items: center; /* 자식들이 자기 영역의 가운데로 */
+    justify-content: space-around;
+}
+
+.emo_box img{
+    width: 60%;
+    /* display: block;
+    margin: 0 auto; */
+}
+
+.emo_box p {
+    /* margin: 0 auto; */
+    color: white;
+    text-align: center; 
+    font-family: 'NanumPenScript';
+    font-size: 30px;
+}
+
+.diary_content { margin-top: 80px; border-top: 4px dotted #ddd;}
+
+.diary_content p{
+    min-width: 100%;
+    min-height: 200px;
+    background-color: #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'NanumPenScript';
+    font-size: 30px;
+    font-weight: bold;
+
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.emo_on_1{ background-color: #64c964;}
+.emo_on_2{ background-color: #9dd772;}
+.emo_on_3{ background-color: #fdce17;}
+.emo_on_4{ background-color: #fd8446;}
+.emo_on_5{ background-color: #fd565f;}

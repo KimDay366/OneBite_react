@@ -1,0 +1,22 @@
+.emoItem{
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.emoItem img{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.emoItem p{
+    margin: 0 auto;
+}
+
+.emo_on_1{ background-color: #64c964;}
+.emo_on_2{ background-color: #9dd772;}
+.emo_on_3{ background-color: #fdce17;}
+.emo_on_4{ background-color: #fd8446;}
+.emo_on_5{ background-color: #fd565f;}

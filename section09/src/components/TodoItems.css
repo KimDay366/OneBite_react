@@ -1,0 +1,15 @@
+.todoItems { display : flex; align-items: center;
+gap: 20px; padding-bottom: 10px; 
+border-bottom: 1px solid #ddd; }
+
+.todoItems input{ width: 20px}
+
+.todoItems h6{ flex : 1; font-size: 14px; margin: 0; }
+
+.todoItems p {font-size: 12px; color: gray}
+
+.todoItems button{ cursor: pointer; color: gray; 
+font: 14px; border: 0; border-radius: 3px; 
+padding: 6px 10px;;}
+
+input:checked + h6 {color: #aaa; text-decoration: line-through;}

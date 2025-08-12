@@ -1,0 +1,69 @@
+[ useReducer 란? ]
+: 컴포넌트 내부에 새로은 State를 생성하는 React Hook 
+: 모든 useState 는 useReducer로 대체 가능
+: 상태관리 코드를 컴포넌트 외부로 분리할 수 있음
+  => useStat는 컴포넌트 내부에서 선언 및 사용 관련 선언이 이루어 져야 함
+     useReducer는 선언만 컴포넌트 내부에서 하고, 나머지 작업은 외부에서 진행해도 무방
+
+function App(){
+    const [todos,setTodos] = useState("");
+
+    const onClick = ()=>{
+        setTodos(...)
+    }
+
+    const [lists, dispatch] = useReducer(reducer);
+}
+
+function reducer(){
+    ...
+}
+
+
+
+[ useReducer 사용법 ]
+import {useReducer} from 'react';
+
+// reducer : '변환기' 라는 뜻을 가짐, 실제로 상태를 변화 시키는 변환기 역할
+function reducer(state,action){
+    switch(action.type){
+        case 'INCREASE' : return state + action.data ;
+        case 'MINUS' : return state - action.data ;
+        default : return state;
+    }
+} 
+
+
+const Sample = ()=>{
+    const [state, dispatch] = useReducer(reducer, 0);
+    // dispatch : 발송하다, 급송하다 => 상태 변화가 있어야 한다는 사실을 알리는 함수
+    // useReducer() 첫번째 인수 : 실제 사용할 함수, 두번째 인수 : 초기값
+
+    // dispatch()가 호출이 되면, useReducer()인자에 따라 reducer()함수가 호출이 되고,
+    // reducer()함수의 인자로 [state - 선언값, action - dispatch의 두개의 객체]가 전달 됨
+
+    const onClickPlus = ()=>{
+        // 인수 : 상태가 어떻게 변화되길 원하는지
+        // -> 액션 객체 = type, data
+
+        dispatch({
+            type: 'INCREASE',
+            data : 1,
+        });         
+    }
+
+    const onClickMinus = ()=>{
+        dispatch({
+            type : "MINUS",
+            data: 1,
+        })
+    }
+
+    return <div>
+        <h1>{state}</h1>
+        <button onClick={onClickPlus}>+</button>
+        <button onClick={onClickMinus}>-</button>
+    </div>
+
+}
+

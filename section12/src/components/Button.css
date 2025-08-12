@@ -1,0 +1,19 @@
+.btn{
+    background-color: #dcdcdc;
+    cursor : pointer;
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.btn_POSITIVE{
+    background-color: rgb(67, 174, 67);
+    color: white;
+}
+
+.btn_NEGATIVE{
+    background-color: rgb(192, 64, 64);
+    color: white;
+}

@@ -1,0 +1,34 @@
+/* font 불러오기 */
+
+@font-face{
+    font-family : 'NanumPenScript';
+    src : url('/public/NanumPenScript-Regular.ttf');
+}
+/* body * {
+    font-family : 'NanumPenScript';
+} */
+
+html, body {
+    margin: 0px;
+    width : 100%;
+    background-color: #eee;
+}
+
+#root{
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+    min-height: 100vh;
+    height: 100%;
+    box-shadow: rgba(100,100,100,0.3) 0px 0px 45px 0px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+body * {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

@@ -1,0 +1,33 @@
+.editor h6{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.editor_date input, textarea{
+    background-color: #eee;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.emo_list_wrapper{
+    display: flex; 
+    justify-content: space-around;
+    gap: 2%;
+}
+
+.editor textarea{
+    padding: 20px; 
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.editor_btn{
+    display: flex;
+    justify-content: space-between;
+}
